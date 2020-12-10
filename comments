@@ -1,0 +1,16 @@
+a = 1
+b = 2
+# above we have two inputs
+c = a + b
+'''
+the above line is summing up a and b 
+and storing it to the c variable
+
+'''
+
+print(c)
+
+'''
+the above is the print statement to print 
+the variable c 
+'''
