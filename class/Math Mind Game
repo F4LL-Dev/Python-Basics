@@ -1,0 +1,25 @@
+from quiz import quiz
+import datetime
+
+Math_game = [" 2/2*2+2-2= ? \n (a) 2\t(b)0\t(c)1",
+             " \n 1 is prime number=? \n (a) yes\t(b)no\t(c)not prime but is composite"
+    , "\n 1000^0= ? \n (a) 1000\t(b)1\t(c)0"]
+
+questions = [
+    quiz(Math_game[0], "a"),
+    quiz(Math_game[1], "b"),
+    quiz(Math_game[2], "b")
+]
+
+
+def test(questions):
+    score = 0
+    for x in questions:
+        result = input(x.prompt+"\n")
+        if result == x.answer:
+            score += 1
+    print("Test Completed at ", datetime.datetime.now())
+    print("Your Result is : ", score ,"/",len(questions))
+    print("You have answered correctly for ", score, " questions out of ", len(questions))
+
+test(questions)
